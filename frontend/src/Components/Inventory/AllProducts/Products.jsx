@@ -122,7 +122,7 @@ export default function PrimarySearchAppBar() {
 
     
     const handleEdit = () => {
-        navigate('editproduct');
+        navigate('/products/editproduct');
     };
 
     const handleAlignment = (event, newAlignment) => {
@@ -135,7 +135,7 @@ export default function PrimarySearchAppBar() {
     };
     
     const handleAddItem = (event) => {
-        navigate("newproduct");
+        navigate("/products/newproduct");
     };
 
     const handleMobileMenuClose = () => {
