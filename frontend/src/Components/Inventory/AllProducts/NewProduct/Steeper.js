@@ -71,29 +71,29 @@ const Category = [
 ];
 
 
-const designation = [
-    {
-        value: 'backend developer',
-        label: 'Backend Developer',
-    },
-    {
-        value: 'Forntend developer',
-        label: 'Frontend Developer',
-    },
-    {
-        value: 'Full Stack developer',
-        label: 'Full Stack Developer',
-    },
-    {
-        value: 'intern',
-        label: 'intern',
-    },
-    {
-        value: 'sofware developer',
-        label: 'Software Developer',
-    },
+// const designation = [
+//     {
+//         value: 'backend developer',
+//         label: 'Backend Developer',
+//     },
+//     {
+//         value: 'Forntend developer',
+//         label: 'Frontend Developer',
+//     },
+//     {
+//         value: 'Full Stack developer',
+//         label: 'Full Stack Developer',
+//     },
+//     {
+//         value: 'intern',
+//         label: 'intern',
+//     },
+//     {
+//         value: 'sofware developer',
+//         label: 'Software Developer',
+//     },
 
-]
+// ]
 const BasicForm = ({ formErrors, setFormErrors, image, setImage, initialValues, setInitialValues }) => {
 
     const handleImage = (e) => {
@@ -237,203 +237,6 @@ const BasicForm = ({ formErrors, setFormErrors, image, setImage, initialValues, 
 
 };
 
-const ContactForm = ({ formErrors, setFormErrors, initialValues, setInitialValues }) => {
-
-    return (
-        <>
-            <Grid container spacing={2}>
-                <Grid item xs={12} md={6} lg={6} >
-
-                    <CssTextField
-                        id="selling-price"
-                        // label="Mobile"
-                        label="Selling Price"
-                        type='number'
-                        placeholder="Enter Amount"
-                        fullWidth
-                        margin="normal"
-                        value={initialValues.sellingPrice}
-                        onChange={(event) => {
-                            setInitialValues({ ...initialValues, sellingPrice: event.target.value })
-                        }}
-                        error={formErrors.sellingPrice}
-                        helperText={formErrors.sellingPrice}
-                    />
-
-                    <CssTextField
-                        label="Total Stock"
-                        placeholder="Enter Stock amount"
-                        type="number"
-                        sx={{  width: '41ch',height: '10ch'}}
-                        id="outlined-start-adornment"
-                        InputProps={{
-                            endAdornment:
-                            <FormControl variant="filled" sx={{ m: 1, minWidth: 100}} size="small">
-                            <InputLabel id="demo-simple-select-standard-label">Qty type</InputLabel>
-                            <Select
-                                labelId="demo-simple-select-standard-label"
-                                id="demo-simple-select-standard"
-                                value={10}
-                                // onChange={handleChange}
-                                label="Qty type"
-                            >
-                                <MenuItem value={10}>Kg</MenuItem>
-                                <MenuItem value={20}>Gm</MenuItem>
-                                <MenuItem value={30}>Pcs</MenuItem>
-                            </Select>
-                        </FormControl>
-                             
-                        }}
-                    />
-
-                </Grid>
-                <Grid item xs={12} md={6} lg={6}>
-
-                    <CssTextField
-                        id="discount"
-                        // label="Mobile"
-                        label="Discount(%)"
-                        type='number'
-                        placeholder="Enter discount"
-                        fullWidth
-                        margin="normal"
-                        value={initialValues.Discount}
-                        onChange={(event) => {
-                            setInitialValues({ ...initialValues, Discount: event.target.value })
-                        }}
-                        error={formErrors.Discount}
-                        helperText={formErrors.Discount}
-                    />
-
-                    <CssTextField
-                        label="Stock Alert"
-                        type="number"
-                        placeholder="Enter Stock amount"
-                        sx={{  width: '41ch' }}
-                        fullWidth
-                        id="outlined-start-adornment"
-                        InputProps={{
-                            endAdornment:
-                                <FormControl variant="filled" sx={{ m: 1, minWidth: 100}} size="small">
-                                    <InputLabel id="demo-simple-select-standard-label">Qty type</InputLabel>
-                                    <Select
-                                        labelId="demo-simple-select-standard-label"
-                                        id="demo-simple-select-standard"
-                                        value={10}
-                                        // onChange={handleChange}
-                                        label="Qty type"
-                                    >
-                                        <MenuItem value={10}>Kg</MenuItem>
-                                        <MenuItem value={20}>Gm</MenuItem>
-                                        <MenuItem value={30}>Pcs</MenuItem>
-                                    </Select>
-                                </FormControl>
-                             
-                        }}
-                    />
-
-                </Grid>
-            </Grid>
-        </>
-    );
-};
-// const PersonalForm = ({ formErrors, setFormErrors, initialValues, setInitialValues }) => {
-
-//     return (
-//         <>
-//             <Grid container spacing={2}>
-//                 <Grid item xs={12} md={12} lg={12} >
-
-//                     <TextField
-//                         id="address1"
-//                         label="Address 1"
-//                         variant="outlined"
-//                         placeholder="Enter Your Address 1"
-//                         fullWidth
-//                         margin="normal"
-//                         value={initialValues.address1}
-//                         onChange={(event) => {
-//                             setInitialValues({ ...initialValues, address1: event.target.value })
-//                         }}
-//                         error={formErrors.address1}
-//                         helperText={formErrors.address1}
-
-//                     />
-
-//                 </Grid>
-//                 <Grid item xs={12} md={6} lg={6}>
-
-//                     <TextField
-//                         id="city"
-//                         label="City"
-//                         variant="outlined"
-//                         placeholder="Enter City"
-//                         fullWidth
-//                         margin="normal"
-//                         value={initialValues.City}
-//                         onChange={(event) => {
-//                             setInitialValues({ ...initialValues, City: event.target.value })
-//                         }}
-//                         error={formErrors.City}
-//                         helperText={formErrors.City}
-//                     />
-//                     <TextField
-//                         id="State"
-//                         label="State"
-//                         variant="outlined"
-//                         placeholder="Enter State"
-//                         fullWidth
-//                         margin="normal"
-//                         value={initialValues.State}
-//                         onChange={(event) => {
-//                             setInitialValues({ ...initialValues, State: event.target.value })
-//                         }}
-//                         error={formErrors.State}
-//                         helperText={formErrors.State}
-//                     />
-
-
-//                 </Grid>
-//                 <Grid item xs={12} md={6} lg={6}>
-
-//                     <TextField
-//                         id="Name"
-//                         label="Country"
-//                         variant="outlined"
-//                         placeholder="Enter Country"
-//                         fullWidth
-//                         margin="normal"
-//                         value={initialValues.Country}
-//                         onChange={(event) => {
-//                             setInitialValues({ ...initialValues, Country: event.target.value })
-//                         }}
-//                         error={formErrors.Country}
-//                         helperText={formErrors.Country}
-//                     />
-
-
-//                     <TextField
-//                         id="Mobile"
-//                         type='number'
-//                         label="Zip Code"
-//                         variant="outlined"
-//                         placeholder="Enter Code"
-//                         fullWidth
-//                         margin="normal"
-//                         value={initialValues.Zip}
-//                         onChange={(event) => {
-//                             setInitialValues({ ...initialValues, Zip: event.target.value })
-//                         }}
-//                         error={formErrors.Zip}
-//                         helperText={formErrors.Zip}
-//                     />
-
-//                 </Grid>
-//             </Grid>
-
-//         </>
-//     );
-// };
 
 
 const LinaerStepper = () => {
@@ -462,7 +265,6 @@ const LinaerStepper = () => {
     function getSteps() {
         return [
             "Product information",
-            "Additional information",
             // "Office Information",
             // "Address",
         ];
@@ -472,8 +274,8 @@ const LinaerStepper = () => {
         switch (step) {
             case 0:
                 return <BasicForm formErrors={formErrors} setFormErrors={setFormErrors} initialValues={initialValues} setInitialValues={setInitialValues} image={image} setImage={setImage} />;
-            case 1:
-                return <ContactForm formErrors={formErrors} setFormErrors={setFormErrors} initialValues={initialValues} setInitialValues={setInitialValues} />;
+            // case 1:
+            //     return <ContactForm formErrors={formErrors} setFormErrors={setFormErrors} initialValues={initialValues} setInitialValues={setInitialValues} />;
             // case 2:
             //     return <PersonalForm formErrors={formErrors} setFormErrors={setFormErrors} initialValues={initialValues} setInitialValues={setInitialValues} />;
             default:
@@ -569,7 +371,7 @@ const LinaerStepper = () => {
                     </Stepper>
 
                     {activeStep === steps.length ? (
-                        <Typography>user added</Typography>
+                        <Typography>product added</Typography>
                     ) : (
                         <>
 

@@ -11,7 +11,6 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ai from "../../Img/ai1.png";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
@@ -127,7 +126,7 @@ export default function Sign()
                     md={false}
                     lg={7}
                     sx={{
-                        backgroundImage: `url(${ai})`,
+                        // backgroundImage: `url(${ai})`,
                         backgroundSize: 'contain',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
@@ -195,8 +194,8 @@ export default function Sign()
                             </Button>
                             <Grid container>
                                 <Grid item xs>
-                                    <Link href="/forgot_password" variant="body2">
-                                        Forgot password?
+                                    <Link href="/SignUP" variant="body2">
+                                        Sign UP
                                     </Link>
                                 </Grid>
                             </Grid>
